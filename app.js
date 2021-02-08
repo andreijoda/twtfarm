@@ -301,14 +301,14 @@ const embed = new Discord.MessageEmbed()
 	.setTimestamp();
 
 webhookClient.send('@everyone', {
-	username: 'Verificação Farm!',
+	username: 'Verificação do Farm!',
 	avatarURL: 'https://i.imgur.com/7NOSCov.png',
 	embeds: [embed],
 });
 
 setInterval(function () {
 	webhookClient.send('@everyone', {
-		username: 'Verificação Farm!',
+		username: 'Verificação do Farm!',
 		avatarURL: 'https://i.imgur.com/7NOSCov.png',
 		embeds: [embed],
 	});
