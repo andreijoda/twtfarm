@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 const config = require("./config.json");
 
 console.log("----------BOT-STARTED----------");
-console.log("----------BOT-0.0.1------------");
+console.log("----------BOT-0.0.2------------");
 
 const clientBot = new Discord.Client();
 clientBot.on("menssage", (menssage) =>{
@@ -61,16 +61,13 @@ var canais = [ 'gaules',
 'rztlive',
 'deercheerup',
 'mathz99',
-'frbiga',
 'bannakercosta',
 'bt0tv',
 'cyberzerar6',
 'clutchcircuit',
 'paitambemjoga',
 'axtlol',
-'huntergodbr',
 'paulanobre',
-'GbrMiT',
 'razah',
 'oestagiario',
 'charlesbrasil1',
