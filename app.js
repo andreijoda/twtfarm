@@ -24,7 +24,6 @@ clientBot.login(config.token);
 //Lista com os canais a serem farmados.
 var canaistofarm = [ 'gaules',
 'brnwowzk1',
-'recrutaxxx',
 'khtex',
 'mch_agg',
 'murilo_rt',
@@ -56,6 +55,7 @@ var canaistofarm = [ 'gaules',
 'skipnho',
 'tixinhadois',
 'raulzitoyt',
+'rztlive',
 'deercheerup',
 'mathz99',
 'frbiga',
@@ -76,6 +76,8 @@ var canaistofarm = [ 'gaules',
 'vinidyph_',
 'satoru_gp',
 'thomefn',
+'hastad',
+'velloso',
 'kwztv', // Amigos
 'gnkzz_',
 'katiaallzz',
@@ -297,7 +299,7 @@ const embed = new Discord.MessageEmbed()
 	.setColor('#ED7300')
 	.setFooter("Atualizado","https://i.imgur.com/C1zVBZt.gif")
 	.setThumbnail("https://i.imgur.com/C1zVBZt.gif")
-	.setDescription("**O Farm está em andamento.** 👍 \n\n O Farm será verificado de 30 em 30 Minutos. \n **Caso não atualize a cada 30 Minutos Informar @uDrei Urgente!** \n *Obrigado por utilizar uDrei Twitch Farm.*")
+	.setDescription("**O Farm está em andamento!.** 👍 \n\n O Farm será verificado de 30 em 30 Minutos. \n **Caso não atualize a cada 30 Minutos Informar @uDrei Urgente!** \n *Obrigado por utilizar uDrei Twitch Farm.*")
 	.setTimestamp();
 
 webhookClient.send('@everyone', {
