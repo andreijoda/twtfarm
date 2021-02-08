@@ -2,6 +2,9 @@ const tmi = require('tmi.js');
 const Discord = require('discord.js');
 const config = require("./config.json");
 
+console.log("----------BOT-STARTED----------");
+console.log("----------BOT-0.0.1------------");
+
 const clientBot = new Discord.Client();
 clientBot.on("menssage", (menssage) =>{
 	console.log("O BotFarm Foi Iniciado.")
@@ -22,7 +25,7 @@ clientBot.on("message", async message => {
 clientBot.login(config.token);
 
 //Lista com os canais a serem farmados.
-var canaistofarm = [ 'gaules',
+var canais = [ 'gaules',
 'brnwowzk1',
 'khtex',
 'mch_agg',
@@ -83,6 +86,10 @@ var canaistofarm = [ 'gaules',
 'katiaallzz',
 'dreizz17'
 ];
+
+var canaistofarm = canais.sort();
+var canaisBreak = canaistofarm.toString().split(',');
+var canaisOrg = canaisBreak.join("\n");
 
 //Cliente 1 Dreizz17
 const client = new tmi.Client({
@@ -274,6 +281,37 @@ client7.on('join', (channel, username, self) => {
     }
 });
 
+const webhookClient = new Discord.WebhookClient('808224320806715413', 'TQq2Za5DtGHYBuKU0ME-HlShlGNfrtrb3SY74srnULHeyXS_GdPXjhPe0DCYu2YrV8XP');
+
+const embed = new Discord.MessageEmbed()
+	.setColor('#ED7300')
+	.setFooter("Atualizado","https://i.imgur.com/C1zVBZt.gif")
+	.setThumbnail("https://i.imgur.com/C1zVBZt.gif")
+	.setDescription("**O Farm está em andamento!.** 👍 \n\n O Farm será verificado de 30 em 30 Minutos. \n **Caso não atualize a cada 30 Minutos Informar @uDrei Urgente!** \n *Obrigado por utilizar uDrei Twitch Farm.*")
+	.setTimestamp();
+
+	const embedStart = new Discord.MessageEmbed()
+	.setColor('#ED7300')
+	.setFooter("Atualizado","https://i.pinimg.com/originals/1e/c9/15/1ec915eb76dcff7edf9e5c195b70363f.gif")
+	.setThumbnail("https://i.pinimg.com/originals/1e/c9/15/1ec915eb76dcff7edf9e5c195b70363f.gif")
+	.setDescription("**O Farm foi iniciado!.** 👍 \n\n " + canaisOrg)
+	.setTimestamp();
+
+webhookClient.send('@everyone', {
+	username: 'Verificação do Farm!',
+	avatarURL: 'https://i.imgur.com/7NOSCov.png',
+	embeds: [embedStart],
+});
+
+setInterval(function () {
+	webhookClient.send('@everyone', {
+		username: 'Verificação do Farm!',
+		avatarURL: 'https://i.imgur.com/7NOSCov.png',
+		embeds: [embed],
+	});
+}, 60000*30);
+
+
 // const webhook = require("webhook-discord");
 
 // const Hook = new webhook.Webhook("https://discord.com/api/webhooks/808224320806715413/TQq2Za5DtGHYBuKU0ME-HlShlGNfrtrb3SY74srnULHeyXS_GdPXjhPe0DCYu2YrV8XP");
@@ -291,33 +329,6 @@ client7.on('join', (channel, username, self) => {
 // setInterval(function () {
 // 	Hook.send(msg);
 // }, 60000*30);
-
-
-const webhookClient = new Discord.WebhookClient('808224320806715413', 'TQq2Za5DtGHYBuKU0ME-HlShlGNfrtrb3SY74srnULHeyXS_GdPXjhPe0DCYu2YrV8XP');
-
-const embed = new Discord.MessageEmbed()
-	.setColor('#ED7300')
-	.setFooter("Atualizado","https://i.imgur.com/C1zVBZt.gif")
-	.setThumbnail("https://i.imgur.com/C1zVBZt.gif")
-	.setDescription("**O Farm está em andamento!.** 👍 \n\n O Farm será verificado de 30 em 30 Minutos. \n **Caso não atualize a cada 30 Minutos Informar @uDrei Urgente!** \n *Obrigado por utilizar uDrei Twitch Farm.*")
-	.setTimestamp();
-
-webhookClient.send('@everyone', {
-	username: 'Verificação do Farm!',
-	avatarURL: 'https://i.imgur.com/7NOSCov.png',
-	embeds: [embed],
-});
-
-setInterval(function () {
-	webhookClient.send('@everyone', {
-		username: 'Verificação do Farm!',
-		avatarURL: 'https://i.imgur.com/7NOSCov.png',
-		embeds: [embed],
-	});
-}, 60000*30);
-
-
-
 
 // const express = require("express");
 // const app = express();
