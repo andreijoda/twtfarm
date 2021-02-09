@@ -336,17 +336,17 @@ const webhookClient = new Discord.WebhookClient('808224320806715413', 'TQq2Za5Dt
 
 const embed = new Discord.MessageEmbed()
 	.setColor('#ED7300')
-	.setFooter("Atualizado","https://i.imgur.com/C1zVBZt.gif")
 	.setThumbnail("https://i.imgur.com/C1zVBZt.gif")
 	.setDescription("**O Farm está em andamento!.** 👍 \n\n O Farm será verificado de 30 em 30 Minutos. \n **Caso não atualize a cada 30 Minutos Informar @uDrei Urgente!** \n *Obrigado por utilizar uDrei Twitch Farm.*")
-	.setTimestamp();
+	.setTimestamp()
+	.setFooter("Atualizado","https://i.imgur.com/C1zVBZt.gif");
 
 	const embedStart = new Discord.MessageEmbed()
 	.setColor('#ED7300')
-	.setFooter("Atualizado","https://i.pinimg.com/originals/1e/c9/15/1ec915eb76dcff7edf9e5c195b70363f.gif")
 	.setThumbnail("https://i.pinimg.com/originals/1e/c9/15/1ec915eb76dcff7edf9e5c195b70363f.gif")
 	.setDescription("**O Farm foi iniciado!.** 👍 \n\n " + canaisOrg)
-	.setTimestamp();
+	.setTimestamp()
+	.setFooter("Atualizado","https://i.pinimg.com/originals/1e/c9/15/1ec915eb76dcff7edf9e5c195b70363f.gif");
 
 webhookClient.send('@everyone', {
 	username: 'Verificação do Farm!',
