@@ -3,11 +3,11 @@ const Discord = require('discord.js');
 const config = require("./config.json");
 
 console.log("----------BOT-STARTED----------");
-console.log("----------BOT-0.0.2------------");
+console.log("----------BOT-0.0.3------------");
 
 const clientBot = new Discord.Client();
 clientBot.on("menssage", (menssage) =>{
-	console.log("O BotFarm Foi Iniciado.")
+	console.log("O FarmTwitch Foi Iniciado.")
 });
 
 clientBot.on("message", async message => {
@@ -19,7 +19,7 @@ clientBot.on("message", async message => {
 
 	if(comando === "farm") {
 		const m = await message.channel.send("Farmando?");
-		m.edit(`Farm está em Andamento.`)
+		m.edit(`Farm está em Andamento. 👌`)
 	}
 });
 clientBot.login(config.token);
@@ -275,6 +275,60 @@ client7.on('message', (channel, tags, message, self) => {
 client7.on('join', (channel, username, self) => {
     if(self) {
         client7.log.error(`Joined ${channel}`);
+    }
+});
+
+//cliente 8 Froty
+const client8 = new tmi.Client({
+	options: { debug: false, messagesLogLevel: "warn" },
+	connection: {
+		reconnect: true,
+		secure: true
+	},
+	identity: {
+		username: 'freps',
+		password: 'oauth:6gid0os8g17fok93o63f2wm2ris8ey'
+	},
+	channels: canaistofarm
+});
+
+client8.connect();
+client8.on('message', (channel, tags, message, self) => {
+	if(self) return;
+	if(message.toLowerCase() === '!dreifarm') {
+		client8.say(channel, `@${tags.username}, Farm em Andamento!`);
+	}
+});
+client8.on('join', (channel, username, self) => {
+    if(self) {
+        client8.log.error(`Joined ${channel}`);
+    }
+});
+
+//cliente 9 Grv
+const client9 = new tmi.Client({
+	options: { debug: false, messagesLogLevel: "warn" },
+	connection: {
+		reconnect: true,
+		secure: true
+	},
+	identity: {
+		username: 'grvtk',
+		password: 'oauth:ydgdr83cmtjqgmb56thpvbh92uxpts'
+	},
+	channels: canaistofarm
+});
+
+client9.connect();
+client9.on('message', (channel, tags, message, self) => {
+	if(self) return;
+	if(message.toLowerCase() === '!dreifarm') {
+		client9.say(channel, `@${tags.username}, Farm em Andamento!`);
+	}
+});
+client9.on('join', (channel, username, self) => {
+    if(self) {
+        client9.log.error(`Joined ${channel}`);
     }
 });
 
