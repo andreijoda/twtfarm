@@ -78,6 +78,7 @@ var canais = [ 'gaules',
 'thomefn',
 'hastad',
 'velloso',
+'nycts',
 'kwztv', // Amigos
 'gnkzz_',
 'katiaallzz',
