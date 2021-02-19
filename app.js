@@ -334,6 +334,33 @@ client9.on('join', (channel, username, self) => {
     }
 });
 
+//cliente 10 Grv
+const client10 = new tmi.Client({
+	options: { debug: false, messagesLogLevel: "warn" },
+	connection: {
+		reconnect: true,
+		secure: true
+	},
+	identity: {
+		username: 'LeandroBrito_',
+		password: 'oauth:u7vift2fnjolvxy1hej4znpi7kb6cz'
+	},
+	channels: canaistofarm
+});
+
+client10.connect();
+client10.on('message', (channel, tags, message, self) => {
+	if(self) return;
+	if(message.toLowerCase() === '!dreifarm') {
+		client10.say(channel, `@${tags.username}, Farm em Andamento!`);
+	}
+});
+client10.on('join', (channel, username, self) => {
+    if(self) {
+        client10.log.error(`Joined ${channel}`);
+    }
+});
+
 const webhookClient = new Discord.WebhookClient('808224320806715413', 'TQq2Za5DtGHYBuKU0ME-HlShlGNfrtrb3SY74srnULHeyXS_GdPXjhPe0DCYu2YrV8XP');
 
 	const embedStart = new Discord.MessageEmbed()
