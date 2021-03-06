@@ -80,6 +80,7 @@ var canais = [ 'gaules',
 'velloso',
 'nycts',
 'vsmzin',
+'faah',
 'kwztv', // Amigos
 'gnkzz_',
 'katiaallzz',
@@ -358,6 +359,33 @@ client10.on('message', (channel, tags, message, self) => {
 client10.on('join', (channel, username, self) => {
     if(self) {
         client10.log.error(`Joined ${channel}`);
+    }
+});
+
+//cliente 11 Rafa
+const client11 = new tmi.Client({
+	options: { debug: false, messagesLogLevel: "warn" },
+	connection: {
+		reconnect: true,
+		secure: true
+	},
+	identity: {
+		username: 'ujoda',
+		password: 'oauth:wqxgx0rrvg6jiv2nj9nqjqexwl98fb'
+	},
+	channels: canaistofarm
+});
+
+client11.connect();
+client11.on('message', (channel, tags, message, self) => {
+	if(self) return;
+	if(message.toLowerCase() === '!dreifarm') {
+		client11.say(channel, `@${tags.username}, Farm em Andamento!`);
+	}
+});
+client11.on('join', (channel, username, self) => {
+    if(self) {
+        client11.log.error(`Joined ${channel}`);
     }
 });
 
