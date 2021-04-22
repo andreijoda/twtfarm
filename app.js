@@ -84,6 +84,7 @@ var canais = [ 'gaules',
 'baiano',
 'bianquinha182',
 'cachorro1337c',
+'cbcsbr', // Camp
 'kwztv', // Amigos
 'gnkzz_',
 'katiaallzz',
