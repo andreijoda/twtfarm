@@ -24,7 +24,7 @@ clientBot.on("message", async message => {
 });
 clientBot.login(config.token);
 
-//Lista com os canais a serem farmados.
+//Lista com os canais a serem farmados..
 var canais = [ 'gaules',
 'brnwowzk1',
 'khtex',
