@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 const config = require("./config.json");
 
 console.log("----------BOT-STARTED----------");
-console.log("----------BOT-0.0.3------------");
+console.log("----------BOT-1.0.0------------");
 
 const clientBot = new Discord.Client();
 clientBot.on("menssage", (menssage) =>{
