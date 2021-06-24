@@ -84,6 +84,10 @@ var canais = [ 'gaules',
 'baiano',
 'bianquinha182',
 'cachorro1337c',
+'att_oficial',
+'dois_a_dois',
+'lucaspierry1',
+'letygod',
 'cbcsbr', // Camp
 'saullo',
 'kwztv', // Amigos
@@ -294,7 +298,7 @@ const client8 = new tmi.Client({
 		secure: true
 	},
 	identity: {
-		username: 'freps',
+		username: 'lfrothyl',
 		password: 'oauth:6gid0os8g17fok93o63f2wm2ris8ey'
 	},
 	channels: canaistofarm
