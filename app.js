@@ -4,6 +4,7 @@ const config = require("./config.json");
 
 console.log("----------BOT-STARTED----------");
 console.log("----------BOT-1.0.0------------");
+console.log("Auth -> https://twitchapps.com/tmi/");
 
 const clientBot = new Discord.Client();
 clientBot.on("menssage", (menssage) =>{
@@ -30,55 +31,33 @@ var canais = [ 'gaules',
 'khtex',
 'mch_agg',
 'murilo_rt',
-'cogu',
-'fkswp',
-'fnxlntc',
 'fbzfps',
 'dougrrr',
 'csrfps',
 'mibrtv',
-'bruninholds',
-'johnpittertv',
-'doutora',
-'queyjo_ralado',
-'rooh1',
 'stereonline',
 'nobru',
 'blxckoutz',
-'furiatv',
-'breeze_fps',
 'jonvlogs',
 'ale_apoka',
 'boltz',
 'sev7n',
 'vickye',
 'jeffaocs',
-'renansouzones',
 'velhovamp1',
 'skipnho',
 'tixinhadois',
-'rztlive',
 'deercheerup',
 'mathz99',
-'bannakercosta',
-'bt0tv',
-'cyberzerar6',
-'clutchcircuit',
+'clutchcircuit', // Camp
 'paitambemjoga',
 'axtlol',
-'paulanobre',
-'razah',
 'oestagiario',
-'charlesbrasil1',
-'jogazulu',
 'hithxck',
 'vinidyph_',
-'satoru_gp',
 'thomefn',
 'hastad',
-'velloso',
 'nycts',
-'vsmzin',
 'faah',
 'baiano',
 'bianquinha182',
@@ -397,6 +376,33 @@ client11.on('join', (channel, username, self) => {
     }
 });
 
+//cliente 12 Leo Abila
+const client12 = new tmi.Client({
+	options: { debug: false, messagesLogLevel: "warn" },
+	connection: {
+		reconnect: true,
+		secure: true
+	},
+	identity: {
+		username: '1timmaia1',
+		password: 'oauth:0cp304r2djo185o9a15730ip3tf0pl'
+	},
+	channels: canaistofarm
+});
+
+client12.connect();
+client12.on('message', (channel, tags, message, self) => {
+	if(self) return;
+	if(message.toLowerCase() === '!dreifarm') {
+		client12.say(channel, `@${tags.username}, Farm em Andamento!`);
+	}
+});
+client12.on('join', (channel, username, self) => {
+    if(self) {
+        client12.log.error(`Joined ${channel}`);
+    }
+});
+
 const webhookClient = new Discord.WebhookClient('808224320806715413', 'TQq2Za5DtGHYBuKU0ME-HlShlGNfrtrb3SY74srnULHeyXS_GdPXjhPe0DCYu2YrV8XP');
 
 	const embedStart = new Discord.MessageEmbed()
@@ -406,7 +412,7 @@ const webhookClient = new Discord.WebhookClient('808224320806715413', 'TQq2Za5Dt
 	.setTimestamp()
 	.setFooter("Atualizado","https://i.pinimg.com/originals/1e/c9/15/1ec915eb76dcff7edf9e5c195b70363f.gif");
 
-webhookClient.send('@everyone :correct:', {
+webhookClient.send('@everyone', {
 	username: 'Verificação do Farm!',
 	avatarURL: 'https://i.imgur.com/7NOSCov.png',
 	embeds: [embedStart],
@@ -420,7 +426,7 @@ setInterval(function () {
 	.setTimestamp()
 	.setFooter("Atualizado","https://i.imgur.com/C1zVBZt.gif");
 
-	webhookClient.send('@everyone :verify:', {
+	webhookClient.send('@everyone', {
 		username: 'Verificação do Farm!',
 		avatarURL: 'https://i.imgur.com/7NOSCov.png',
 		embeds: [embed],
