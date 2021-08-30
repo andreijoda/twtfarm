@@ -404,31 +404,31 @@ client12.on('join', (channel, username, self) => {
 });
 
 //cliente 13 Antonia
-const client13 = new tmi.Client({
-	options: { debug: false, messagesLogLevel: "warn" },
-	connection: {
-		reconnect: true,
-		secure: true
-	},
-	identity: {
-		username: 'antgvlr',
-		password: 'oauth:561hzzb46021rvvfln0uguzauh8xry'
-	},
-	channels: canaistofarm
-});
+// const client13 = new tmi.Client({
+// 	options: { debug: false, messagesLogLevel: "warn" },
+// 	connection: {
+// 		reconnect: true,
+// 		secure: true
+// 	},
+// 	identity: {
+// 		username: 'antgvlr',
+// 		password: 'oauth:561hzzb46021rvvfln0uguzauh8xry'
+// 	},
+// 	channels: canaistofarm
+// });
 
-client13.connect();
-client13.on('message', (channel, tags, message, self) => {
-	if(self) return;
-	if(message.toLowerCase() === '!dreifarm') {
-		client13.say(channel, `@${tags.username}, Farm em Andamento!`);
-	}
-});
-client13.on('join', (channel, username, self) => {
-    if(self) {
-        client13.log.error(`Joined13 ${channel}`);
-    }
-});
+// client13.connect();
+// client13.on('message', (channel, tags, message, self) => {
+// 	if(self) return;
+// 	if(message.toLowerCase() === '!dreifarm') {
+// 		client13.say(channel, `@${tags.username}, Farm em Andamento!`);
+// 	}
+// });
+// client13.on('join', (channel, username, self) => {
+//     if(self) {
+//         client13.log.error(`Joined13 ${channel}`);
+//     }
+// });
 
 const webhookClient = new Discord.WebhookClient('808224320806715413', 'TQq2Za5DtGHYBuKU0ME-HlShlGNfrtrb3SY74srnULHeyXS_GdPXjhPe0DCYu2YrV8XP');
 
