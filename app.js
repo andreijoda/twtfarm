@@ -100,7 +100,7 @@ client.on('message', (channel, tags, message, self) => {
 });
 client.on('join', (channel, username, self) => {
     if(self) {
-        client.log.error(`Joined ${channel}`);
+        client.log.error(`Joined01 ${channel}`);
     }
 });
 
@@ -127,7 +127,7 @@ client2.on('message', (channel, tags, message, self) => {
 });
 client2.on('join', (channel, username, self) => {
     if(self) {
-        client2.log.error(`Joined ${channel}`);
+        client2.log.error(`Joined02 ${channel}`);
     }
 });
 
@@ -154,7 +154,7 @@ client3.on('message', (channel, tags, message, self) => {
 });
 client3.on('join', (channel, username, self) => {
     if(self) {
-        client3.log.error(`Joined ${channel}`);
+        client3.log.error(`Joined03 ${channel}`);
     }
 });
 
@@ -181,7 +181,7 @@ client4.on('message', (channel, tags, message, self) => {
 });
 client4.on('join', (channel, username, self) => {
     if(self) {
-        client4.log.error(`Joined ${channel}`);
+        client4.log.error(`Joined04 ${channel}`);
     }
 });
 
@@ -209,7 +209,7 @@ client5.on('message', (channel, tags, message, self) => {
 });
 client5.on('join', (channel, username, self) => {
     if(self) {
-        client5.log.error(`Joined ${channel}`);
+        client5.log.error(`Joined05 ${channel}`);
     }
 });
 
@@ -236,7 +236,7 @@ client6.on('message', (channel, tags, message, self) => {
 });
 client6.on('join', (channel, username, self) => {
     if(self) {
-        client6.log.error(`Joined ${channel}`);
+        client6.log.error(`Joined06 ${channel}`);
     }
 });
 
@@ -264,7 +264,7 @@ client7.on('message', (channel, tags, message, self) => {
 });
 client7.on('join', (channel, username, self) => {
     if(self) {
-        client7.log.error(`Joined ${channel}`);
+        client7.log.error(`Joined07 ${channel}`);
     }
 });
 
@@ -291,7 +291,7 @@ client8.on('message', (channel, tags, message, self) => {
 });
 client8.on('join', (channel, username, self) => {
     if(self) {
-        client8.log.error(`Joined ${channel}`);
+        client8.log.error(`Joined08 ${channel}`);
     }
 });
 
@@ -318,7 +318,7 @@ client9.on('message', (channel, tags, message, self) => {
 });
 client9.on('join', (channel, username, self) => {
     if(self) {
-        client9.log.error(`Joined ${channel}`);
+        client9.log.error(`Joined09 ${channel}`);
     }
 });
 
@@ -345,7 +345,7 @@ client10.on('message', (channel, tags, message, self) => {
 });
 client10.on('join', (channel, username, self) => {
     if(self) {
-        client10.log.error(`Joined ${channel}`);
+        client10.log.error(`Joined10 ${channel}`);
     }
 });
 
@@ -372,7 +372,7 @@ client11.on('message', (channel, tags, message, self) => {
 });
 client11.on('join', (channel, username, self) => {
     if(self) {
-        client11.log.error(`Joined ${channel}`);
+        client11.log.error(`Joined11 ${channel}`);
     }
 });
 
@@ -399,7 +399,7 @@ client12.on('message', (channel, tags, message, self) => {
 });
 client12.on('join', (channel, username, self) => {
     if(self) {
-        client12.log.error(`Joined ${channel}`);
+        client12.log.error(`Joined12 ${channel}`);
     }
 });
 
@@ -426,7 +426,7 @@ client13.on('message', (channel, tags, message, self) => {
 });
 client13.on('join', (channel, username, self) => {
     if(self) {
-        client13.log.error(`Joined ${channel}`);
+        client13.log.error(`Joined13 ${channel}`);
     }
 });
 
