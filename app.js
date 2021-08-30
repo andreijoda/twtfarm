@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 const config = require("./config.json");
 
 console.log("----------BOT-STARTED----------");
-console.log("----------BOT-1.0.0------------");
+console.log("----------BOT-1.0.1------------");
 console.log("Auth -> https://twitchapps.com/tmi/");
 
 const clientBot = new Discord.Client();
