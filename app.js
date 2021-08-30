@@ -430,7 +430,7 @@ client12.on('join', (channel, username, self) => {
 //     }
 // });
 
-const webhookClient = new Discord.WebhookClient('808224320806715413', 'TQq2Za5DtGHYBuKU0ME-HlShlGNfrtrb3SY74srnULHeyXS_GdPXjhPe0DCYu2YrV8XP');
+const webhookClient = new Discord.WebhookClient('881758758680821760', '7mzXoghY4mez2fhD4gWf2M4x-31-hX0YKVDrhB4ofoNADQfzMfCWIgdedbwtZxWEa7Qh');
 
 	const embedStart = new Discord.MessageEmbed()
 	.setColor('#ED7300')
