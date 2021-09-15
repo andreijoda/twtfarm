@@ -405,32 +405,59 @@ client12.on('join', (channel, username, self) => {
     }
 });
 
-//cliente 13 Antonia
-// const client13 = new tmi.Client({
-// 	options: { debug: false, messagesLogLevel: "warn" },
-// 	connection: {
-// 		reconnect: true,
-// 		secure: true
-// 	},
-// 	identity: {
-// 		username: 'antgvlr',
-// 		password: 'oauth:561hzzb46021rvvfln0uguzauh8xry'
-// 	},
-// 	channels: canaistofarm
-// });
+// cliente 13 Antonia
+const client13 = new tmi.Client({
+	options: { debug: false, messagesLogLevel: "warn" },
+	connection: {
+		reconnect: true,
+		secure: true
+	},
+	identity: {
+		username: 'antgvlr',
+		password: 'oauth:fuefhy0on4qixnhh4t069ecww5cwvh'
+	},
+	channels: canaistofarm
+});
 
-// client13.connect();
-// client13.on('message', (channel, tags, message, self) => {
-// 	if(self) return;
-// 	if(message.toLowerCase() === '!dreifarm') {
-// 		client13.say(channel, `@${tags.username}, Farm em Andamento!`);
-// 	}
-// });
-// client13.on('join', (channel, username, self) => {
-//     if(self) {
-//         client13.log.error(`Joined13 ${channel}`);
-//     }
-// });
+client13.connect();
+client13.on('message', (channel, tags, message, self) => {
+	if(self) return;
+	if(message.toLowerCase() === '!dreifarm') {
+		client13.say(channel, `@${tags.username}, Farm em Andamento!`);
+	}
+});
+client13.on('join', (channel, username, self) => {
+    if(self) {
+        client13.log.error(`Joined13 ${channel}`);
+    }
+});
+
+// cliente 14 Nicole
+const client14 = new tmi.Client({
+	options: { debug: false, messagesLogLevel: "warn" },
+	connection: {
+		reconnect: true,
+		secure: true
+	},
+	identity: {
+		username: 'vadiniky',
+		password: 'oauth:bmwko5tz136itlnl132jhevfe0aoyd'
+	},
+	channels: canaistofarm
+});
+
+client14.connect();
+client14.on('message', (channel, tags, message, self) => {
+	if(self) return;
+	if(message.toLowerCase() === '!dreifarm') {
+		client14.say(channel, `@${tags.username}, Farm em Andamento!`);
+	}
+});
+client14.on('join', (channel, username, self) => {
+    if(self) {
+        client14.log.error(`Joined14 ${channel}`);
+    }
+});
 
 const webhookClient = new Discord.WebhookClient('881758758680821760', '7mzXoghY4mez2fhD4gWf2M4x-31-hX0YKVDrhB4ofoNADQfzMfCWIgdedbwtZxWEa7Qh');
 
