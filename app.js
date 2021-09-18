@@ -114,8 +114,8 @@ const client2 = new tmi.Client({
 		secure: true
 	},
 	identity: {
-		username: 'dreizzdrop',
-		password: 'oauth:txcgzyvkl2nd5sxd3b7xj1ddd6vjsf'
+		username: 'vadiniky',
+		password: 'oauth:bmwko5tz136itlnl132jhevfe0aoyd'
 	},
 	channels: canaistofarm
 });
@@ -440,8 +440,8 @@ const client14 = new tmi.Client({
 		secure: true
 	},
 	identity: {
-		username: 'vadiniky',
-		password: 'oauth:bmwko5tz136itlnl132jhevfe0aoyd'
+		username: 'dreizzdrop',
+		password: 'oauth:txcgzyvkl2nd5sxd3b7xj1ddd6vjsf'
 	},
 	channels: canaistofarm
 });
