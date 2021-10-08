@@ -89,7 +89,7 @@ const client = new tmi.Client({
 	},
 	identity: {
 		username: 'DreizZ17',
-		password: 'oauth:bix4gq3n42dyam183k2y6xo8mw7oub'
+		password: 'oauth:p9a27fa9g4q592ao84s58pjqlrl2qe'
 	},
 	channels: canaistofarm
 });
