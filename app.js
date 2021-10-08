@@ -169,7 +169,7 @@ const client4 = new tmi.Client({
 	},
 	identity: {
 		username: 'gnkzz_',
-		password: 'oauth:c0eojnbihwfzyuej9l3rx7fscqhtrb'
+		password: 'oauth:g32wy07jbe6hngkvvfnq8a7172s5m3'
 	},
 	channels: canaistofarm
 });
@@ -224,7 +224,7 @@ const client6 = new tmi.Client({
 	},
 	identity: {
 		username: 'srpaixa0',
-		password: 'oauth:5zm7z38wkiqd4x459nppg3c4xw2d24'
+		password: 'oauth:m5oufgu1i9e1fglo622j4m24rttdls'
 	},
 	channels: canaistofarm
 });
@@ -252,7 +252,7 @@ const client7 = new tmi.Client({
 	},
 	identity: {
 		username: 'otacc',
-		password: 'oauth:654qdlo7dyg1oyotttpq21p6c9fnkz'
+		password: 'oauth:el7eocg8k9s7464cndgye5kibtbkz9'
 	},
 	channels: canaistofarm
 });
@@ -306,7 +306,7 @@ const client9 = new tmi.Client({
 	},
 	identity: {
 		username: 'grvtk',
-		password: 'oauth:ydgdr83cmtjqgmb56thpvbh92uxpts'
+		password: 'oauth:0f2kds9l7ml7pbiecgix0290vxtx8c'
 	},
 	channels: canaistofarm
 });
