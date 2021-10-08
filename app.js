@@ -362,7 +362,7 @@ const client12 = new tmi.Client({
 	},
 	identity: {
 		username: '1timmaia1',
-		password: 'oauth:0cp304r2djo185o9a15730ip3tf0pl'
+		password: 'oauth:qy53yxzlbuztpz895n1u8k1a0qzwrp'
 	},
 	channels: canaistofarm
 });
