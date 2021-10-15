@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 const config = require("./config.json");
 
 console.log("----------BOT-STARTED----------");
-console.log("----------BOT-1.0.2------------");
+console.log("----------BOT-1.0.5------------");
 console.log("Auth -> https://twitchapps.com/tmi/");
 
 const clientBot = new Discord.Client();
@@ -106,7 +106,7 @@ client.on('join', (channel, username, self) => {
     }
 });
 
-//Cliente 2 dreizzdrop
+//Cliente 2 Nicole
 const client2 = new tmi.Client({
 	options: { debug: false, messagesLogLevel: "warn" },
 	connection: {
@@ -142,7 +142,7 @@ const client3 = new tmi.Client({
 	},
 	identity: {
 		username: 'kwztv',
-		password: 'oauth:28z24j41rftt7g3akx9brh71g5vi2s'
+		password: 'oauth:yvtobs08599b26lypfqlc9yxuoli9d'
 	},
 	channels: canaistofarm
 });
@@ -224,7 +224,7 @@ const client6 = new tmi.Client({
 	},
 	identity: {
 		username: 'srpaixa0',
-		password: 'oauth:m5oufgu1i9e1fglo622j4m24rttdls'
+		password: 'oauth:iy1rpe35w5sk5vjh1y0rku273rudgt'
 	},
 	channels: canaistofarm
 });
@@ -271,31 +271,31 @@ client7.on('join', (channel, username, self) => {
 });
 
 //cliente 8 Froty
-const client8 = new tmi.Client({
-	options: { debug: false, messagesLogLevel: "warn" },
-	connection: {
-		reconnect: true,
-		secure: true
-	},
-	identity: {
-		username: 'lfrothyl',
-		password: 'oauth:pjuhtt6rgoyjybns66djhvrn448zpm'
-	},
-	channels: canaistofarm
-});
+// const client8 = new tmi.Client({
+// 	options: { debug: false, messagesLogLevel: "warn" },
+// 	connection: {
+// 		reconnect: true,
+// 		secure: true
+// 	},
+// 	identity: {
+// 		username: 'lfrothyl',
+// 		password: 'oauth:pjuhtt6rgoyjybns66djhvrn448zpm'
+// 	},
+// 	channels: canaistofarm
+// });
 
-client8.connect();
-client8.on('message', (channel, tags, message, self) => {
-	if(self) return;
-	if(message.toLowerCase() === '!dreifarm') {
-		client8.say(channel, `@${tags.username}, Farm em Andamento!`);
-	}
-});
-client8.on('join', (channel, username, self) => {
-    if(self) {
-        client8.log.error(`Joined08 ${channel}`);
-    }
-});
+// client8.connect();
+// client8.on('message', (channel, tags, message, self) => {
+// 	if(self) return;
+// 	if(message.toLowerCase() === '!dreifarm') {
+// 		client8.say(channel, `@${tags.username}, Farm em Andamento!`);
+// 	}
+// });
+// client8.on('join', (channel, username, self) => {
+//     if(self) {
+//         client8.log.error(`Joined08 ${channel}`);
+//     }
+// });
 
 //cliente 9 Grv
 const client9 = new tmi.Client({
@@ -389,7 +389,7 @@ const client13 = new tmi.Client({
 	},
 	identity: {
 		username: 'antgvlr',
-		password: 'oauth:fuefhy0on4qixnhh4t069ecww5cwvh'
+		password: 'oauth:6shu2gjlim8bfkbnl9f6256zc014al'
 	},
 	channels: canaistofarm
 });
@@ -407,7 +407,7 @@ client13.on('join', (channel, username, self) => {
     }
 });
 
-// cliente 14 Nicole
+// cliente 14 dreizdrop
 const client14 = new tmi.Client({
 	options: { debug: false, messagesLogLevel: "warn" },
 	connection: {
@@ -439,7 +439,7 @@ const webhookClient = new Discord.WebhookClient('881758758680821760', '7mzXoghY4
 	const embedStart = new Discord.MessageEmbed()
 	.setColor('#ED7300')
 	.setThumbnail("https://i.pinimg.com/originals/1e/c9/15/1ec915eb76dcff7edf9e5c195b70363f.gif")
-	.setDescription("✔ **O Farm foi iniciado!.** ✔ \n\n " + canaisOrg)
+	.setDescription("✔ **O Farm foi iniciado!!!.** ✔ \n\n " + canaisOrg)
 	.setTimestamp()
 	.setFooter("Atualizado","https://i.pinimg.com/originals/1e/c9/15/1ec915eb76dcff7edf9e5c195b70363f.gif");
 
