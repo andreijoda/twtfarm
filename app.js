@@ -271,31 +271,31 @@ client7.on('join', (channel, username, self) => {
 });
 
 //cliente 8 Froty
-// const client8 = new tmi.Client({
-// 	options: { debug: false, messagesLogLevel: "warn" },
-// 	connection: {
-// 		reconnect: true,
-// 		secure: true
-// 	},
-// 	identity: {
-// 		username: 'lfrothyl',
-// 		password: 'oauth:pjuhtt6rgoyjybns66djhvrn448zpm'
-// 	},
-// 	channels: canaistofarm
-// });
+const client8 = new tmi.Client({
+	options: { debug: false, messagesLogLevel: "warn" },
+	connection: {
+		reconnect: true,
+		secure: true
+	},
+	identity: {
+		username: 'lfrothyl',
+		password: 'oauth:ae0styuofbe2c6bx63o91yut4m3sb7'
+	},
+	channels: canaistofarm
+});
 
-// client8.connect();
-// client8.on('message', (channel, tags, message, self) => {
-// 	if(self) return;
-// 	if(message.toLowerCase() === '!dreifarm') {
-// 		client8.say(channel, `@${tags.username}, Farm em Andamento!`);
-// 	}
-// });
-// client8.on('join', (channel, username, self) => {
-//     if(self) {
-//         client8.log.error(`Joined08 ${channel}`);
-//     }
-// });
+client8.connect();
+client8.on('message', (channel, tags, message, self) => {
+	if(self) return;
+	if(message.toLowerCase() === '!dreifarm') {
+		client8.say(channel, `@${tags.username}, Farm em Andamento!`);
+	}
+});
+client8.on('join', (channel, username, self) => {
+    if(self) {
+        client8.log.error(`Joined08 ${channel}`);
+    }
+});
 
 //cliente 9 Grv
 const client9 = new tmi.Client({
