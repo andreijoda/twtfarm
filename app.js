@@ -142,7 +142,7 @@ const client3 = new tmi.Client({
 	},
 	identity: {
 		username: 'kwztv',
-		password: 'oauth:yvtobs08599b26lypfqlc9yxuoli9d'
+		password: 'oauth:scqapfuwhbjk7aljiofuwzjl83vmrr'
 	},
 	channels: canaistofarm
 });
