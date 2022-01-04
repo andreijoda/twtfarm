@@ -93,7 +93,19 @@ const client = new tmi.Client({
 	},
 	channels: canaistofarm
 });
-client.connect();
+client.connect().catch((err) => {
+	const embedError = new Discord.MessageEmbed()
+	.setColor('#ED7300')
+	.setDescription("X **A conta de Andrei está com problemas.** X \n\n CONTATE @udreilele AGORA!")
+	.setTimestamp()
+	.setFooter("Atualizado");
+
+	webhookClient.send('@ERRO', {
+	username: 'Verificação do Farm!',
+	avatarURL: 'https://i.imgur.com/7NOSCov.png',
+	embeds: [embedError],
+});
+});
 client.on('message', (channel, tags, message, self) => {
 	if(self) return;
 	if(message.toLowerCase() === '!dreifarm') {
@@ -395,19 +407,16 @@ const client13 = new tmi.Client({
 });
 
 client13.connect().catch((err) => {
-    const webhookClient = new Discord.WebhookClient('881758758680821760', '7mzXoghY4mez2fhD4gWf2M4x-31-hX0YKVDrhB4ofoNADQfzMfCWIgdedbwtZxWEa7Qh');
-
-	const embedStart = new Discord.MessageEmbed()
+	const embedError = new Discord.MessageEmbed()
 	.setColor('#ED7300')
-	.setThumbnail("https://i.pinimg.com/originals/1e/c9/15/1ec915eb76dcff7edf9e5c195b70363f.gif")
-	.setDescription("X **O Farm foi parado por ...** X \n\n ")
+	.setDescription("X **A conta de Andrei está com problemas.** X \n\n CONTATE @udreilele AGORA!")
 	.setTimestamp()
-	.setFooter("Atualizado","https://i.pinimg.com/originals/1e/c9/15/1ec915eb76dcff7edf9e5c195b70363f.gif");
+	.setFooter("Atualizado");
 
-webhookClient.send('@udreilele', {
+	webhookClient.send('@ERRO', {
 	username: 'Verificação do Farm!',
 	avatarURL: 'https://i.imgur.com/7NOSCov.png',
-	embeds: [embedStart],
+	embeds: [embedError],
 });
 });
 client13.on('message', (channel, tags, message, self) => {
