@@ -1,12 +1,16 @@
 const tmi = require('tmi.js');
 const Discord = require('discord.js');
 const config = require("./config.json");
+const { Client, Intents } = require('discord.js');
 
 console.log("----------BOT-STARTED----------");
 console.log("----------BOT-V.04/01/22------------");
 console.log("Auth -> https://twitchapps.com/tmi/");
 
-const clientBot = new Discord.Client();
+const clientBot = new Discord.Client({ intents: myIntents });
+const myIntents = new Intents();
+myIntents.add(Intents.FLAGS.GUILD_PRESENCES, Intents.FLAGS.GUILD_MEMBERS);
+
 clientBot.on("menssage", (menssage) =>{
 	console.log("O FarmTwitch Foi Iniciado.")
 });
@@ -24,13 +28,6 @@ clientBot.on("message", async message => {
 	}
 });
 clientBot.login(config.token);
-
-const { Client, Intents } = require('discord.js');
-
-const myIntents = new Intents();
-myIntents.add(Intents.FLAGS.GUILD_PRESENCES, Intents.FLAGS.GUILD_MEMBERS);
-
-const clientStatus = new Client({ intents: myIntents });
 
 //Lista com os canais a serem farmados..
 var canais = [ 'gaules',
