@@ -28,7 +28,14 @@ clientBot.on("message", async message => {
 
 	if(comando === "farm") {
 		const m = await message.channel.send("Farmando?");
-		m.edit(`Farm está em Andamento. 👌`)
+		m.edit(`Farm está em Andamento. 👌`);
+		client13.connect().then(m => {
+			console.log('A conta de '+ user13 +' está Ok.');
+			notifyOk(user13);
+		}).catch(err => {
+			console.log('A conta de '+ user13 +' está com erro. Verifique. Erro: ' + err);
+			notifyError(user13,err);
+		});
 	}
 });
 clientBot.login(config.token);
