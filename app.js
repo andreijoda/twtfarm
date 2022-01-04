@@ -27,7 +27,10 @@ clientBot.login(config.token);
 
 const { Client, Intents } = require('discord.js');
 
-const botin = new Client({ intents: [Intents.FLAGS.GUILDS] });
+const myIntents = new Intents();
+myIntents.add(Intents.FLAGS.GUILD_PRESENCES, Intents.FLAGS.GUILD_MEMBERS);
+
+const clientStatus = new Client({ intents: myIntents });
 
 //Lista com os canais a serem farmados..
 var canais = [ 'gaules',
