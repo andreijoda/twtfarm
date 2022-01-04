@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 const config = require("./config.json");
 
 console.log("----------BOT-STARTED----------");
-console.log("----------BOT-1.0.5------------");
+console.log("----------BOT-V.04/01/22------------");
 console.log("Auth -> https://twitchapps.com/tmi/");
 
 const clientBot = new Discord.Client();
@@ -80,6 +80,55 @@ var canaistofarm = canais.sort();
 var canaisBreak = canaistofarm.toString().split(',');
 var canaisOrg = canaisBreak.join("\n");
 
+const user01 = 'Andrei';
+const user02 = 'Nicole';
+const user03 = 'Kauê';
+const user04 = 'Matheus';
+const user05 = 'Gabriel';
+const user06 = 'Egon';
+const user07 = 'Otávio';
+const user08 = 'Felipe';
+const user09 = 'Guilherme';
+const user10 = null;
+const user11 = 'Rafael';
+const user12 = 'Leo';
+const user13 = 'Antônia';
+const user14 = 'Andrei 2 (dreizzdrop)';
+
+
+//Funções de mensagem embed
+function notifyError(farmer,erro) {
+	const webhookUsers = new Discord.WebhookClient('927929531115917342', 'QGY-DA7DqlZSbQuRG8rLwFLNHpZNmjl2uNeDfEbIt982WwvUS7a3W3xe6T6ZAz0tReu4');
+	const embedError = new Discord.MessageEmbed()
+	.setColor('#ED7300')
+	.setThumbnail("https://i.imgur.com/WdCH6xl.gif")
+	.setDescription("❌ A conta de **" + farmer + "** está com problemas. Erro: **" + erro + "**")
+	.setTimestamp()
+	.setFooter("Atualizado","https://i.imgur.com/WdCH6xl.gif");
+
+webhookUsers.send('@erro', {
+	username: 'Verificação do Farm!',
+	avatarURL: 'https://i.imgur.com/7NOSCov.png',
+	embeds: [embedError],
+});
+}
+
+function notifyOk(farmer) {
+	const webhookUsers = new Discord.WebhookClient('927929531115917342', 'QGY-DA7DqlZSbQuRG8rLwFLNHpZNmjl2uNeDfEbIt982WwvUS7a3W3xe6T6ZAz0tReu4');
+	const embedOk = new Discord.MessageEmbed()
+	.setColor('#ED7300')
+	.setThumbnail("https://i.imgur.com/R8SwAkb.gif")
+	.setDescription(":white_check_mark:  A conta de **" + farmer + "** está com Ok.")
+	.setTimestamp()
+	.setFooter("Atualizado","https://i.imgur.com/R8SwAkb.gif");
+
+webhookUsers.send({
+	username: 'Verificação do Farm!',
+	avatarURL: 'https://i.imgur.com/7NOSCov.png',
+	embeds: [embedOk],
+});
+}
+
 //Cliente 1 Dreizz17
 const client = new tmi.Client({
 	options: { debug: false, messagesLogLevel: "warn" },
@@ -93,8 +142,12 @@ const client = new tmi.Client({
 	},
 	channels: canaistofarm
 });
-client.connect().catch((err) => {
-	client.log.error("Conta 1.");
+client.connect().then(m => {
+	console.log('A conta de '+ user01 +' está Ok.');
+	notifyOk(user01);
+}).catch(err => {
+	console.log('A conta de '+ user01 +' está com erro. Verifique. Erro: ' + err);
+	notifyError(user01,err);
 });
 client.on('message', (channel, tags, message, self) => {
 	if(self) return;
@@ -122,7 +175,13 @@ const client2 = new tmi.Client({
 	channels: canaistofarm
 });
 
-client2.connect();
+client2.connect().then(m => {
+	console.log('A conta de '+ user02 +' está Ok.');
+	notifyOk(user02);
+}).catch(err => {
+	console.log('A conta de '+ user02 +' está com erro. Verifique. Erro: ' + err);
+	notifyError(user02,err);
+});
 client2.on('message', (channel, tags, message, self) => {
 	if(self) return;
 	if(message.toLowerCase() === '!dreifarm') {
@@ -149,7 +208,13 @@ const client3 = new tmi.Client({
 	channels: canaistofarm
 });
 
-client3.connect();
+client3.connect().then(m => {
+	console.log('A conta de '+ user03 +' está Ok.');
+	notifyOk(user03);
+}).catch(err => {
+	console.log('A conta de '+ user03 +' está com erro. Verifique. Erro: ' + err);
+	notifyError(user03,err);
+});
 client3.on('message', (channel, tags, message, self) => {
 	if(self) return;
 	if(message.toLowerCase() === '!dreifarm') {
@@ -176,7 +241,13 @@ const client4 = new tmi.Client({
 	channels: canaistofarm
 });
 
-client4.connect();
+client4.connect().then(m => {
+	console.log('A conta de '+ user04 +' está Ok.');
+	notifyOk(user04);
+}).catch(err => {
+	console.log('A conta de '+ user04 +' está com erro. Verifique. Erro: ' + err);
+	notifyError(user04,err);
+});
 client4.on('message', (channel, tags, message, self) => {
 	if(self) return;
 	if(message.toLowerCase() === '!dreifarm') {
@@ -204,7 +275,13 @@ const client5 = new tmi.Client({
 	channels: canaistofarm
 });
 
-client5.connect();
+client5.connect().then(m => {
+	console.log('A conta de '+ user05 +' está Ok.');
+	notifyOk(user05);
+}).catch(err => {
+	console.log('A conta de '+ user05 +' está com erro. Verifique. Erro: ' + err);
+	notifyError(user05,err);
+});
 client5.on('message', (channel, tags, message, self) => {
 	if(self) return;
 	if(message.toLowerCase() === '!dreifarm') {
@@ -231,7 +308,13 @@ const client6 = new tmi.Client({
 	channels: canaistofarm
 });
 
-client6.connect();
+client6.connect().then(m => {
+	console.log('A conta de '+ user06 +' está Ok.');
+	notifyOk(user06);
+}).catch(err => {
+	console.log('A conta de '+ user06 +' está com erro. Verifique. Erro: ' + err);
+	notifyError(user06,err);
+});
 client6.on('message', (channel, tags, message, self) => {
 	if(self) return;
 	if(message.toLowerCase() === '!dreifarm') {
@@ -259,7 +342,13 @@ const client7 = new tmi.Client({
 	channels: canaistofarm
 });
 
-client7.connect();
+client7.connect().then(m => {
+	console.log('A conta de '+ user07 +' está Ok.');
+	notifyOk(user07);
+}).catch(err => {
+	console.log('A conta de '+ user07 +' está com erro. Verifique. Erro: ' + err);
+	notifyError(user07,err);
+});
 client7.on('message', (channel, tags, message, self) => {
 	if(self) return;
 	if(message.toLowerCase() === '!dreifarm') {
@@ -286,7 +375,13 @@ const client8 = new tmi.Client({
 	channels: canaistofarm
 });
 
-client8.connect();
+client8.connect().then(m => {
+	console.log('A conta de '+ user08 +' está Ok.');
+	notifyOk(user08);
+}).catch(err => {
+	console.log('A conta de '+ user08 +' está com erro. Verifique. Erro: ' + err);
+	notifyError(user08,err);
+});
 client8.on('message', (channel, tags, message, self) => {
 	if(self) return;
 	if(message.toLowerCase() === '!dreifarm') {
@@ -313,7 +408,13 @@ const client9 = new tmi.Client({
 	channels: canaistofarm
 });
 
-client9.connect();
+client9.connect().then(m => {
+	console.log('A conta de '+ user09 +' está Ok.');
+	notifyOk(user09);
+}).catch(err => {
+	console.log('A conta de '+ user09 +' está com erro. Verifique. Erro: ' + err);
+	notifyError(user09,err);
+});
 client9.on('message', (channel, tags, message, self) => {
 	if(self) return;
 	if(message.toLowerCase() === '!dreifarm') {
@@ -342,7 +443,13 @@ const client11 = new tmi.Client({
 	channels: canaistofarm
 });
 
-client11.connect();
+client11.connect().then(m => {
+	console.log('A conta de '+ user11 +' está Ok.');
+	notifyOk(user11);
+}).catch(err => {
+	console.log('A conta de '+ user11 +' está com erro. Verifique. Erro: ' + err);
+	notifyError(user11,err);
+});
 client11.on('message', (channel, tags, message, self) => {
 	if(self) return;
 	if(message.toLowerCase() === '!dreifarm') {
@@ -369,7 +476,13 @@ const client12 = new tmi.Client({
 	channels: canaistofarm
 });
 
-client12.connect();
+client12.connect().then(m => {
+	console.log('A conta de '+ user12 +' está Ok.');
+	notifyOk(user12);
+}).catch(err => {
+	console.log('A conta de '+ user12 +' está com erro. Verifique. Erro: ' + err);
+	notifyError(user12,err);
+});
 client12.on('message', (channel, tags, message, self) => {
 	if(self) return;
 	if(message.toLowerCase() === '!dreifarm') {
@@ -396,8 +509,12 @@ const client13 = new tmi.Client({
 	channels: canaistofarm
 });
 
-client13.connect().catch((err) => {
-	client13.log.error("Conta 13.");
+client13.connect().then(m => {
+	console.log('A conta de '+ user13 +' está Ok.');
+	notifyOk(user13);
+}).catch(err => {
+	console.log('A conta de '+ user13 +' está com erro. Verifique. Erro: ' + err);
+	notifyError(user13,err);
 });
 client13.on('message', (channel, tags, message, self) => {
 	if(self) return;
@@ -425,7 +542,13 @@ const client14 = new tmi.Client({
 	channels: canaistofarm
 });
 
-client14.connect();
+client14.connect().then(m => {
+	console.log('A conta de '+ user14 +' está Ok.');
+	notifyOk(user14);
+}).catch(err => {
+	console.log('A conta de '+ user14 +' está com erro. Verifique. Erro: ' + err);
+	notifyError(user14,err);
+});
 client14.on('message', (channel, tags, message, self) => {
 	if(self) return;
 	if(message.toLowerCase() === '!dreifarm') {
