@@ -381,31 +381,49 @@ client12.on('join', (channel, username, self) => {
 });
 
 // cliente 13 Antonia
-// const client13 = new tmi.Client({
-// 	options: { debug: false, messagesLogLevel: "warn" },
-// 	connection: {
-// 		reconnect: true,
-// 		secure: true
-// 	},
-// 	identity: {
-// 		username: 'antgvlr',
-// 		password: 'oauth:6shu2gjlim8bfkbnl9f6256zc014al'
-// 	},
-// 	channels: canaistofarm
-// });
+const client13 = new tmi.Client({
+	options: { debug: false, messagesLogLevel: "warn" },
+	connection: {
+		reconnect: true,
+		secure: true
+	},
+	identity: {
+		username: 'antgvlr',
+		password: 'oauth:6shu2gjlim8bfkbnl9f6256zc014al'
+	},
+	channels: canaistofarm
+});
 
-// client13.connect();
-// client13.on('message', (channel, tags, message, self) => {
-// 	if(self) return;
-// 	if(message.toLowerCase() === '!dreifarm') {
-// 		client13.say(channel, `@${tags.username}, Farm em Andamento!`);
-// 	}
-// });
-// client13.on('join', (channel, username, self) => {
-//     if(self) {
-//         client13.log.error(`Joined13 ${channel}`);
-//     }
-// });
+client13.connect();
+.then((data) => {
+    // data returns [server, port]
+}).catch((err) => {
+    const webhookClient = new Discord.WebhookClient('881758758680821760', '7mzXoghY4mez2fhD4gWf2M4x-31-hX0YKVDrhB4ofoNADQfzMfCWIgdedbwtZxWEa7Qh');
+
+	const embedStart = new Discord.MessageEmbed()
+	.setColor('#ED7300')
+	.setThumbnail("https://i.pinimg.com/originals/1e/c9/15/1ec915eb76dcff7edf9e5c195b70363f.gif")
+	.setDescription("X **O Farm foi parado por ...** X \n\n ")
+	.setTimestamp()
+	.setFooter("Atualizado","https://i.pinimg.com/originals/1e/c9/15/1ec915eb76dcff7edf9e5c195b70363f.gif");
+
+webhookClient.send('@udreilele', {
+	username: 'Verificação do Farm!',
+	avatarURL: 'https://i.imgur.com/7NOSCov.png',
+	embeds: [embedStart],
+});
+});
+client13.on('message', (channel, tags, message, self) => {
+	if(self) return;
+	if(message.toLowerCase() === '!dreifarm') {
+		client13.say(channel, `@${tags.username}, Farm em Andamento!`);
+	}
+});
+client13.on('join', (channel, username, self) => {
+    if(self) {
+        client13.log.error(`Joined13 ${channel}`);
+    }
+});
 
 // cliente 14 dreizdrop
 const client14 = new tmi.Client({
