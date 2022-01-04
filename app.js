@@ -381,31 +381,31 @@ client12.on('join', (channel, username, self) => {
 });
 
 // cliente 13 Antonia
-const client13 = new tmi.Client({
-	options: { debug: false, messagesLogLevel: "warn" },
-	connection: {
-		reconnect: true,
-		secure: true
-	},
-	identity: {
-		username: 'antgvlr',
-		password: 'oauth:6shu2gjlim8bfkbnl9f6256zc014al'
-	},
-	channels: canaistofarm
-});
+// const client13 = new tmi.Client({
+// 	options: { debug: false, messagesLogLevel: "warn" },
+// 	connection: {
+// 		reconnect: true,
+// 		secure: true
+// 	},
+// 	identity: {
+// 		username: 'antgvlr',
+// 		password: 'oauth:6shu2gjlim8bfkbnl9f6256zc014al'
+// 	},
+// 	channels: canaistofarm
+// });
 
-client13.connect();
-client13.on('message', (channel, tags, message, self) => {
-	if(self) return;
-	if(message.toLowerCase() === '!dreifarm') {
-		client13.say(channel, `@${tags.username}, Farm em Andamento!`);
-	}
-});
-client13.on('join', (channel, username, self) => {
-    if(self) {
-        client13.log.error(`Joined13 ${channel}`);
-    }
-});
+// client13.connect();
+// client13.on('message', (channel, tags, message, self) => {
+// 	if(self) return;
+// 	if(message.toLowerCase() === '!dreifarm') {
+// 		client13.say(channel, `@${tags.username}, Farm em Andamento!`);
+// 	}
+// });
+// client13.on('join', (channel, username, self) => {
+//     if(self) {
+//         client13.log.error(`Joined13 ${channel}`);
+//     }
+// });
 
 // cliente 14 dreizdrop
 const client14 = new tmi.Client({
