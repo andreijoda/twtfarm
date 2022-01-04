@@ -106,7 +106,7 @@ function notifyError(farmer,erro) {
 	.setTimestamp()
 	.setFooter("Atualizado","https://i.imgur.com/WdCH6xl.gif");
 
-webhookUsers.send('@erro', {
+webhookUsers.send('<@&927948192987873281>', {
 	username: 'Verificação do Farm!',
 	avatarURL: 'https://i.imgur.com/7NOSCov.png',
 	embeds: [embedError],
