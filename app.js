@@ -7,9 +7,7 @@ console.log("----------BOT-STARTED----------");
 console.log("----------BOT-V.04/01/22------------");
 console.log("Auth -> https://twitchapps.com/tmi/");
 
-const clientBot = new Discord.Client({ intents: myIntents });
-const myIntents = new Intents();
-myIntents.add(Intents.FLAGS.GUILD_PRESENCES, Intents.FLAGS.GUILD_MEMBERS);
+const clientBot = new Discord.Client({ intents: [Intents.FLAGS.GUILDS] });
 
 clientBot.on("menssage", (menssage) =>{
 	console.log("O FarmTwitch Foi Iniciado.")
