@@ -94,17 +94,7 @@ const client = new tmi.Client({
 	channels: canaistofarm
 });
 client.connect().catch((err) => {
-	const embedError = new Discord.MessageEmbed()
-	.setColor('#ED7300')
-	.setDescription("X **A conta de Andrei está com problemas.** X \n\n CONTATE @udreilele AGORA!")
-	.setTimestamp()
-	.setFooter("Atualizado");
-
-	webhookClient.send('@ERRO', {
-	username: 'Verificação do Farm!',
-	avatarURL: 'https://i.imgur.com/7NOSCov.png',
-	embeds: [embedError],
-});
+	console.log.error("Conta 1.");
 });
 client.on('message', (channel, tags, message, self) => {
 	if(self) return;
@@ -407,17 +397,7 @@ const client13 = new tmi.Client({
 });
 
 client13.connect().catch((err) => {
-	const embedError = new Discord.MessageEmbed()
-	.setColor('#ED7300')
-	.setDescription("X **A conta de Andrei está com problemas.** X \n\n CONTATE @udreilele AGORA!")
-	.setTimestamp()
-	.setFooter("Atualizado");
-
-	webhookClient.send('@ERRO', {
-	username: 'Verificação do Farm!',
-	avatarURL: 'https://i.imgur.com/7NOSCov.png',
-	embeds: [embedError],
-});
+	console.log.error("Conta 13.");
 });
 client13.on('message', (channel, tags, message, self) => {
 	if(self) return;
