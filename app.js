@@ -44,7 +44,7 @@ clientBot.on("message", async message => {
 	if(comando === "farm") {
 		const m = await message.channel.send("Farmando?");
 		m.edit(`Farm está em Andamento. 👌`);
-		client1.connect().then(m => {
+		client.connect().then(m => {
 			console.log('A conta de '+ user01 +' está Ok.');
 			notifyOk(user01);
 		}).catch(err => {
