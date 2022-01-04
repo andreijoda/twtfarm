@@ -395,9 +395,7 @@ const client13 = new tmi.Client({
 });
 
 client13.connect();
-.then((data) => {
-    // data returns [server, port]
-}).catch((err) => {
+.catch((err) => {
     const webhookClient = new Discord.WebhookClient('881758758680821760', '7mzXoghY4mez2fhD4gWf2M4x-31-hX0YKVDrhB4ofoNADQfzMfCWIgdedbwtZxWEa7Qh');
 
 	const embedStart = new Discord.MessageEmbed()
