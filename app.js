@@ -94,7 +94,7 @@ const client = new tmi.Client({
 	channels: canaistofarm
 });
 client.connect().catch((err) => {
-	console.log.error("Conta 1.");
+	client.log.error("Conta 1.");
 });
 client.on('message', (channel, tags, message, self) => {
 	if(self) return;
@@ -397,7 +397,7 @@ const client13 = new tmi.Client({
 });
 
 client13.connect().catch((err) => {
-	console.log.error("Conta 13.");
+	client13.log.error("Conta 13.");
 });
 client13.on('message', (channel, tags, message, self) => {
 	if(self) return;
