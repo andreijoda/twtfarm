@@ -7,6 +7,21 @@ console.log("----------BOT-STARTED----------");
 console.log("----------BOT-V.04/01/22------------");
 console.log("Auth -> https://twitchapps.com/tmi/");
 
+const user01 = 'Andrei';
+const user02 = 'Nicole';
+const user03 = 'Kauê';
+const user04 = 'Matheus';
+const user05 = 'Gabriel';
+const user06 = 'Egon';
+const user07 = 'Otávio';
+const user08 = 'Felipe';
+const user09 = 'Guilherme';
+const user10 = null;
+const user11 = 'Rafael';
+const user12 = 'Leo';
+const user13 = 'Antônia';
+const user14 = 'Andrei 2 (dreizzdrop)';
+
 const clientBot = new Discord.Client();
 
 
@@ -29,6 +44,102 @@ clientBot.on("message", async message => {
 	if(comando === "farm") {
 		const m = await message.channel.send("Farmando?");
 		m.edit(`Farm está em Andamento. 👌`);
+		client1.connect().then(m => {
+			console.log('A conta de '+ user01 +' está Ok.');
+			notifyOk(user01);
+		}).catch(err => {
+			console.log('A conta de '+ user01 +' está com erro. Verifique. Erro: ' + err);
+			notifyError(user01,err);
+		});
+		
+		client2.connect().then(m => {
+			console.log('A conta de '+ user02 +' está Ok.');
+			notifyOk(user02);
+		}).catch(err => {
+			console.log('A conta de '+ user02 +' está com erro. Verifique. Erro: ' + err);
+			notifyError(user02,err);
+		});
+		
+		client3.connect().then(m => {
+			console.log('A conta de '+ user03 +' está Ok.');
+			notifyOk(user03);
+		}).catch(err => {
+			console.log('A conta de '+ user03 +' está com erro. Verifique. Erro: ' + err);
+			notifyError(user03,err);
+		});
+		
+		client4.connect().then(m => {
+			console.log('A conta de '+ user04 +' está Ok.');
+			notifyOk(user04);
+		}).catch(err => {
+			console.log('A conta de '+ user04 +' está com erro. Verifique. Erro: ' + err);
+			notifyError(user04,err);
+		});
+		
+		client5.connect().then(m => {
+			console.log('A conta de '+ user05 +' está Ok.');
+			notifyOk(user05);
+		}).catch(err => {
+			console.log('A conta de '+ user05 +' está com erro. Verifique. Erro: ' + err);
+			notifyError(user05,err);
+		});
+		
+		client6.connect().then(m => {
+			console.log('A conta de '+ user06 +' está Ok.');
+			notifyOk(user06);
+		}).catch(err => {
+			console.log('A conta de '+ user06 +' está com erro. Verifique. Erro: ' + err);
+			notifyError(user06,err);
+		});
+		
+		client7.connect().then(m => {
+			console.log('A conta de '+ user07 +' está Ok.');
+			notifyOk(user07);
+		}).catch(err => {
+			console.log('A conta de '+ user07 +' está com erro. Verifique. Erro: ' + err);
+			notifyError(user07,err);
+		});
+		
+		client8.connect().then(m => {
+			console.log('A conta de '+ user08 +' está Ok.');
+			notifyOk(user08);
+		}).catch(err => {
+			console.log('A conta de '+ user08 +' está com erro. Verifique. Erro: ' + err);
+			notifyError(user08,err);
+		});
+		
+		client9.connect().then(m => {
+			console.log('A conta de '+ user09 +' está Ok.');
+			notifyOk(user09);
+		}).catch(err => {
+			console.log('A conta de '+ user09 +' está com erro. Verifique. Erro: ' + err);
+			notifyError(user09,err);
+		});
+		
+// 		client10.connect().then(m => {
+// 			console.log('A conta de '+ user10 +' está Ok.');
+// 			notifyOk(user10);
+// 		}).catch(err => {
+// 			console.log('A conta de '+ user10 +' está com erro. Verifique. Erro: ' + err);
+// 			notifyError(user10,err);
+// 		});
+		
+		client11.connect().then(m => {
+			console.log('A conta de '+ user11 +' está Ok.');
+			notifyOk(user11);
+		}).catch(err => {
+			console.log('A conta de '+ user11 +' está com erro. Verifique. Erro: ' + err);
+			notifyError(user11,err);
+		});
+		
+		client12.connect().then(m => {
+			console.log('A conta de '+ user12 +' está Ok.');
+			notifyOk(user12);
+		}).catch(err => {
+			console.log('A conta de '+ user12 +' está com erro. Verifique. Erro: ' + err);
+			notifyError(user12,err);
+		});
+		
 		client13.connect().then(m => {
 			console.log('A conta de '+ user13 +' está Ok.');
 			notifyOk(user13);
@@ -36,6 +147,15 @@ clientBot.on("message", async message => {
 			console.log('A conta de '+ user13 +' está com erro. Verifique. Erro: ' + err);
 			notifyError(user13,err);
 		});
+		
+		client14.connect().then(m => {
+			console.log('A conta de '+ user14 +' está Ok.');
+			notifyOk(user14);
+		}).catch(err => {
+			console.log('A conta de '+ user14 +' está com erro. Verifique. Erro: ' + err);
+			notifyError(user14,err);
+		});
+		
 	}
 });
 clientBot.login(config.token);
@@ -94,22 +214,6 @@ var canais = [ 'gaules',
 var canaistofarm = canais.sort();
 var canaisBreak = canaistofarm.toString().split(',');
 var canaisOrg = canaisBreak.join("\n");
-
-const user01 = 'Andrei';
-const user02 = 'Nicole';
-const user03 = 'Kauê';
-const user04 = 'Matheus';
-const user05 = 'Gabriel';
-const user06 = 'Egon';
-const user07 = 'Otávio';
-const user08 = 'Felipe';
-const user09 = 'Guilherme';
-const user10 = null;
-const user11 = 'Rafael';
-const user12 = 'Leo';
-const user13 = 'Antônia';
-const user14 = 'Andrei 2 (dreizzdrop)';
-
 
 //Funções de mensagem embed
 function notifyError(farmer,erro) {
