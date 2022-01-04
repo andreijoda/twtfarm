@@ -12,7 +12,7 @@ const clientBot = new Discord.Client();
 
 clientBot.on("ready", () => {
   //console.log(`Bot: Hosting ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`); 
-	clientBot.user.setActivity('Farmando. ⛏', {type: 'LISTENING'});
+	clientBot.user.setActivity('Farmando. ⛏');
 });
 
 clientBot.on("menssage", (menssage) =>{
