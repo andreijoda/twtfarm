@@ -205,6 +205,7 @@ var canais = [ 'gaules',
 'lucaspierry1',
 'cbcsbr', // Camp
 'saullo',
+'bomberonebr',
 'kwztv', // Amigos
 'gnkzz_',
 'katiaallzz',
