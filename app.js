@@ -323,7 +323,7 @@ const client3 = new tmi.Client({
 	},
 	identity: {
 		username: 'kwztv',
-		password: 'oauth:scqapfuwhbjk7aljiofuwzjl83vmrr'
+		password: 'oauth:r7q0v7s0u92u29vqp3igge4igs1u20'
 	},
 	channels: canaistofarm
 });
