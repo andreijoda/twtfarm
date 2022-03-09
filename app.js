@@ -100,13 +100,13 @@ clientBot.on("message", async message => {
 			notifyError(user07,err);
 		});
 		
-		client8.connect().then(m => {
-			console.log('A conta de '+ user08 +' está Ok.');
-			notifyOk(user08);
-		}).catch(err => {
-			console.log('A conta de '+ user08 +' está com erro. Verifique. Erro: ' + err);
-			notifyError(user08,err);
-		});
+// 		client8.connect().then(m => {
+// 			console.log('A conta de '+ user08 +' está Ok.');
+// 			notifyOk(user08);
+// 		}).catch(err => {
+// 			console.log('A conta de '+ user08 +' está com erro. Verifique. Erro: ' + err);
+// 			notifyError(user08,err);
+// 		});
 		
 		client9.connect().then(m => {
 			console.log('A conta de '+ user09 +' está Ok.');
@@ -124,13 +124,13 @@ clientBot.on("message", async message => {
 // 			notifyError(user10,err);
 // 		});
 		
-		client11.connect().then(m => {
-			console.log('A conta de '+ user11 +' está Ok.');
-			notifyOk(user11);
-		}).catch(err => {
-			console.log('A conta de '+ user11 +' está com erro. Verifique. Erro: ' + err);
-			notifyError(user11,err);
-		});
+// 		client11.connect().then(m => {
+// 			console.log('A conta de '+ user11 +' está Ok.');
+// 			notifyOk(user11);
+// 		}).catch(err => {
+// 			console.log('A conta de '+ user11 +' está com erro. Verifique. Erro: ' + err);
+// 			notifyError(user11,err);
+// 		});
 		
 		client12.connect().then(m => {
 			console.log('A conta de '+ user12 +' está Ok.');
@@ -140,13 +140,13 @@ clientBot.on("message", async message => {
 			notifyError(user12,err);
 		});
 		
-		client13.connect().then(m => {
-			console.log('A conta de '+ user13 +' está Ok.');
-			notifyOk(user13);
-		}).catch(err => {
-			console.log('A conta de '+ user13 +' está com erro. Verifique. Erro: ' + err);
-			notifyError(user13,err);
-		});
+// 		client13.connect().then(m => {
+// 			console.log('A conta de '+ user13 +' está Ok.');
+// 			notifyOk(user13);
+// 		}).catch(err => {
+// 			console.log('A conta de '+ user13 +' está com erro. Verifique. Erro: ' + err);
+// 			notifyError(user13,err);
+// 		});
 		
 		client14.connect().then(m => {
 			console.log('A conta de '+ user14 +' está Ok.');
@@ -482,37 +482,37 @@ client7.on('join', (channel, username, self) => {
 });
 
 //cliente 8 Froty
-const client8 = new tmi.Client({
-	options: { debug: false, messagesLogLevel: "warn" },
-	connection: {
-		reconnect: true,
-		secure: true
-	},
-	identity: {
-		username: 'lfrothyl',
-		password: 'oauth:ae0styuofbe2c6bx63o91yut4m3sb7'
-	},
-	channels: canaistofarm
-});
+// const client8 = new tmi.Client({
+// 	options: { debug: false, messagesLogLevel: "warn" },
+// 	connection: {
+// 		reconnect: true,
+// 		secure: true
+// 	},
+// 	identity: {
+// 		username: 'lfrothyl',
+// 		password: 'oauth:ae0styuofbe2c6bx63o91yut4m3sb7'
+// 	},
+// 	channels: canaistofarm
+// });
 
-client8.connect().then(m => {
-	console.log('A conta de '+ user08 +' está Ok.');
-	notifyOk(user08);
-}).catch(err => {
-	console.log('A conta de '+ user08 +' está com erro. Verifique. Erro: ' + err);
-	notifyError(user08,err);
-});
-client8.on('message', (channel, tags, message, self) => {
-	if(self) return;
-	if(message.toLowerCase() === '!dreifarm') {
-		client8.say(channel, `@${tags.username}, Farm em Andamento!`);
-	}
-});
-client8.on('join', (channel, username, self) => {
-    if(self) {
-        client8.log.error(`Joined08 ${channel}`);
-    }
-});
+// client8.connect().then(m => {
+// 	console.log('A conta de '+ user08 +' está Ok.');
+// 	notifyOk(user08);
+// }).catch(err => {
+// 	console.log('A conta de '+ user08 +' está com erro. Verifique. Erro: ' + err);
+// 	notifyError(user08,err);
+// });
+// client8.on('message', (channel, tags, message, self) => {
+// 	if(self) return;
+// 	if(message.toLowerCase() === '!dreifarm') {
+// 		client8.say(channel, `@${tags.username}, Farm em Andamento!`);
+// 	}
+// });
+// client8.on('join', (channel, username, self) => {
+//     if(self) {
+//         client8.log.error(`Joined08 ${channel}`);
+//     }
+// });
 
 //cliente 9 Grv
 const client9 = new tmi.Client({
@@ -550,37 +550,37 @@ client9.on('join', (channel, username, self) => {
 // CLIENTE 10 FALTA FALTA FALTA
 
 //cliente 11 Rafa
-const client11 = new tmi.Client({
-	options: { debug: false, messagesLogLevel: "warn" },
-	connection: {
-		reconnect: true,
-		secure: true
-	},
-	identity: {
-		username: 'ujoda',
-		password: 'oauth:wqxgx0rrvg6jiv2nj9nqjqexwl98fb'
-	},
-	channels: canaistofarm
-});
+// const client11 = new tmi.Client({
+// 	options: { debug: false, messagesLogLevel: "warn" },
+// 	connection: {
+// 		reconnect: true,
+// 		secure: true
+// 	},
+// 	identity: {
+// 		username: 'ujoda',
+// 		password: 'oauth:wqxgx0rrvg6jiv2nj9nqjqexwl98fb'
+// 	},
+// 	channels: canaistofarm
+// });
 
-client11.connect().then(m => {
-	console.log('A conta de '+ user11 +' está Ok.');
-	notifyOk(user11);
-}).catch(err => {
-	console.log('A conta de '+ user11 +' está com erro. Verifique. Erro: ' + err);
-	notifyError(user11,err);
-});
-client11.on('message', (channel, tags, message, self) => {
-	if(self) return;
-	if(message.toLowerCase() === '!dreifarm') {
-		client11.say(channel, `@${tags.username}, Farm em Andamento!`);
-	}
-});
-client11.on('join', (channel, username, self) => {
-    if(self) {
-        client11.log.error(`Joined11 ${channel}`);
-    }
-});
+// client11.connect().then(m => {
+// 	console.log('A conta de '+ user11 +' está Ok.');
+// 	notifyOk(user11);
+// }).catch(err => {
+// 	console.log('A conta de '+ user11 +' está com erro. Verifique. Erro: ' + err);
+// 	notifyError(user11,err);
+// });
+// client11.on('message', (channel, tags, message, self) => {
+// 	if(self) return;
+// 	if(message.toLowerCase() === '!dreifarm') {
+// 		client11.say(channel, `@${tags.username}, Farm em Andamento!`);
+// 	}
+// });
+// client11.on('join', (channel, username, self) => {
+//     if(self) {
+//         client11.log.error(`Joined11 ${channel}`);
+//     }
+// });
 
 //cliente 12 Leo Abila
 const client12 = new tmi.Client({
@@ -616,37 +616,37 @@ client12.on('join', (channel, username, self) => {
 });
 
 // cliente 13 Antonia
-const client13 = new tmi.Client({
-	options: { debug: false, messagesLogLevel: "warn" },
-	connection: {
-		reconnect: true,
-		secure: true
-	},
-	identity: {
-		username: 'antgvlr',
-		password: 'oauth:6shu2gjlim8bfkbnl9f6256zc014al'
-	},
-	channels: canaistofarm
-});
+// const client13 = new tmi.Client({
+// 	options: { debug: false, messagesLogLevel: "warn" },
+// 	connection: {
+// 		reconnect: true,
+// 		secure: true
+// 	},
+// 	identity: {
+// 		username: 'antgvlr',
+// 		password: 'oauth:6shu2gjlim8bfkbnl9f6256zc014al'
+// 	},
+// 	channels: canaistofarm
+// });
 
-client13.connect().then(m => {
-	console.log('A conta de '+ user13 +' está Ok.');
-	notifyOk(user13);
-}).catch(err => {
-	console.log('A conta de '+ user13 +' está com erro. Verifique. Erro: ' + err);
-	notifyError(user13,err);
-});
-client13.on('message', (channel, tags, message, self) => {
-	if(self) return;
-	if(message.toLowerCase() === '!dreifarm') {
-		client13.say(channel, `@${tags.username}, Farm em Andamento!`);
-	}
-});
-client13.on('join', (channel, username, self) => {
-    if(self) {
-        client13.log.error(`Joined13 ${channel}`);
-    }
-});
+// client13.connect().then(m => {
+// 	console.log('A conta de '+ user13 +' está Ok.');
+// 	notifyOk(user13);
+// }).catch(err => {
+// 	console.log('A conta de '+ user13 +' está com erro. Verifique. Erro: ' + err);
+// 	notifyError(user13,err);
+// });
+// client13.on('message', (channel, tags, message, self) => {
+// 	if(self) return;
+// 	if(message.toLowerCase() === '!dreifarm') {
+// 		client13.say(channel, `@${tags.username}, Farm em Andamento!`);
+// 	}
+// });
+// client13.on('join', (channel, username, self) => {
+//     if(self) {
+//         client13.log.error(`Joined13 ${channel}`);
+//     }
+// });
 
 // cliente 14 dreizdrop
 const client14 = new tmi.Client({
