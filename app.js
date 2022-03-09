@@ -14,12 +14,12 @@ const user04 = 'Matheus';
 const user05 = 'Gabriel';
 const user06 = 'Egon';
 const user07 = 'Otávio';
-const user08 = 'Felipe';
+// const user08 = 'Felipe';
 const user09 = 'Guilherme';
 const user10 = null;
-const user11 = 'Rafael';
+// const user11 = 'Rafael';
 const user12 = 'Leo';
-const user13 = 'Antônia';
+// const user13 = 'Antônia';
 const user14 = 'Andrei 2 (dreizzdrop)';
 
 const clientBot = new Discord.Client();
