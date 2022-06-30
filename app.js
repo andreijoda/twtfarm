@@ -3,8 +3,8 @@ const Discord = require('discord.js');
 const config = require("./config.json");
 const { Client, Intents } = require('discord.js');
 
-console.log("-----------BOT-STARTED-----------");
-console.log("-----------BOT-V.09/03/22-------------");
+console.log("----------BOT-STARTED----------");
+console.log("----------BOT-V.09/03/22------------");
 console.log("Auth -> https://twitchapps.com/tmi/");
 
 const user01 = 'Andrei';
