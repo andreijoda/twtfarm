@@ -11,7 +11,7 @@ const user01 = 'Andrei';
 const user02 = 'Nicole';
 const user03 = 'Kauê';
 const user04 = 'Matheus';
-const user05 = 'Gabriel';
+// const user05 = 'Gabriel';
 const user06 = 'Egon';
 const user07 = 'Otávio';
 const user08 = 'João';
@@ -76,13 +76,13 @@ clientBot.on("message", async message => {
 			notifyError(user04,err);
 		});
 		
-		client5.connect().then(m => {
-			console.log('A conta de '+ user05 +' está Ok.');
-			notifyOk(user05);
-		}).catch(err => {
-			console.log('A conta de '+ user05 +' está com erro. Verifique. Erro: ' + err);
-			notifyError(user05,err);
-		});
+// 		client5.connect().then(m => {
+// 			console.log('A conta de '+ user05 +' está Ok.');
+// 			notifyOk(user05);
+// 		}).catch(err => {
+// 			console.log('A conta de '+ user05 +' está com erro. Verifique. Erro: ' + err);
+// 			notifyError(user05,err);
+// 		});
 		
 		client6.connect().then(m => {
 			console.log('A conta de '+ user06 +' está Ok.');
@@ -382,37 +382,37 @@ client4.on('join', (channel, username, self) => {
 
 
 //cliente 5 Katialzz
-const client5 = new tmi.Client({
-	options: { debug: false, messagesLogLevel: "warn" },
-	connection: {
-		reconnect: true,
-		secure: true
-	},
-	identity: {
-		username: 'katiaallzz',
-		password: 'oauth:5jw5ou8dha44d2trh5wqlfmc3jt0rp'
-	},
-	channels: canaistofarm
-});
+// const client5 = new tmi.Client({
+// 	options: { debug: false, messagesLogLevel: "warn" },
+// 	connection: {
+// 		reconnect: true,
+// 		secure: true
+// 	},
+// 	identity: {
+// 		username: 'katiaallzz',
+// 		password: 'oauth:5jw5ou8dha44d2trh5wqlfmc3jt0rp'
+// 	},
+// 	channels: canaistofarm
+// });
 
-client5.connect().then(m => {
-	console.log('A conta de '+ user05 +' está Ok.');
-	notifyOk(user05);
-}).catch(err => {
-	console.log('A conta de '+ user05 +' está com erro. Verifique. Erro: ' + err);
-	notifyError(user05,err);
-});
-client5.on('message', (channel, tags, message, self) => {
-	if(self) return;
-	if(message.toLowerCase() === '!dreifarm') {
-		client5.say(channel, `@${tags.username}, Farm em Andamento!`);
-	}
-});
-client5.on('join', (channel, username, self) => {
-    if(self) {
-        client5.log.error(`Joined05 ${channel}`);
-    }
-});
+// client5.connect().then(m => {
+// 	console.log('A conta de '+ user05 +' está Ok.');
+// 	notifyOk(user05);
+// }).catch(err => {
+// 	console.log('A conta de '+ user05 +' está com erro. Verifique. Erro: ' + err);
+// 	notifyError(user05,err);
+// });
+// client5.on('message', (channel, tags, message, self) => {
+// 	if(self) return;
+// 	if(message.toLowerCase() === '!dreifarm') {
+// 		client5.say(channel, `@${tags.username}, Farm em Andamento!`);
+// 	}
+// });
+// client5.on('join', (channel, username, self) => {
+//     if(self) {
+//         client5.log.error(`Joined05 ${channel}`);
+//     }
+// });
 
 //cliente 6 srPaixao
 const client6 = new tmi.Client({
