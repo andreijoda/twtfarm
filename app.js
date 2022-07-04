@@ -14,7 +14,7 @@ const user04 = 'Matheus';
 const user05 = 'Gabriel';
 const user06 = 'Egon';
 const user07 = 'Otávio';
-// const user08 = 'Felipe';
+const user08 = 'João';
 const user09 = 'Guilherme';
 const user10 = null;
 // const user11 = 'Rafael';
@@ -100,13 +100,13 @@ clientBot.on("message", async message => {
 			notifyError(user07,err);
 		});
 		
-// 		client8.connect().then(m => {
-// 			console.log('A conta de '+ user08 +' está Ok.');
-// 			notifyOk(user08);
-// 		}).catch(err => {
-// 			console.log('A conta de '+ user08 +' está com erro. Verifique. Erro: ' + err);
-// 			notifyError(user08,err);
-// 		});
+		client8.connect().then(m => {
+			console.log('A conta de '+ user08 +' está Ok.');
+			notifyOk(user08);
+		}).catch(err => {
+			console.log('A conta de '+ user08 +' está com erro. Verifique. Erro: ' + err);
+			notifyError(user08,err);
+		});
 		
 		client9.connect().then(m => {
 			console.log('A conta de '+ user09 +' está Ok.');
@@ -481,38 +481,38 @@ client7.on('join', (channel, username, self) => {
     }
 });
 
-//cliente 8 Froty
-// const client8 = new tmi.Client({
-// 	options: { debug: false, messagesLogLevel: "warn" },
-// 	connection: {
-// 		reconnect: true,
-// 		secure: true
-// 	},
-// 	identity: {
-// 		username: 'lfrothyl',
-// 		password: 'oauth:ae0styuofbe2c6bx63o91yut4m3sb7'
-// 	},
-// 	channels: canaistofarm
-// });
+//cliente 8 João
+const client8 = new tmi.Client({
+	options: { debug: false, messagesLogLevel: "warn" },
+	connection: {
+		reconnect: true,
+		secure: true
+	},
+	identity: {
+		username: 'br1nqu3d0_',
+		password: 'oauth:v9j3kqau7wrg5wcfnytp0b2xmcaae3'
+	},
+	channels: canaistofarm
+});
 
-// client8.connect().then(m => {
-// 	console.log('A conta de '+ user08 +' está Ok.');
-// 	notifyOk(user08);
-// }).catch(err => {
-// 	console.log('A conta de '+ user08 +' está com erro. Verifique. Erro: ' + err);
-// 	notifyError(user08,err);
-// });
-// client8.on('message', (channel, tags, message, self) => {
-// 	if(self) return;
-// 	if(message.toLowerCase() === '!dreifarm') {
-// 		client8.say(channel, `@${tags.username}, Farm em Andamento!`);
-// 	}
-// });
-// client8.on('join', (channel, username, self) => {
-//     if(self) {
-//         client8.log.error(`Joined08 ${channel}`);
-//     }
-// });
+client8.connect().then(m => {
+	console.log('A conta de '+ user08 +' está Ok.');
+	notifyOk(user08);
+}).catch(err => {
+	console.log('A conta de '+ user08 +' está com erro. Verifique. Erro: ' + err);
+	notifyError(user08,err);
+});
+client8.on('message', (channel, tags, message, self) => {
+	if(self) return;
+	if(message.toLowerCase() === '!dreifarm') {
+		client8.say(channel, `@${tags.username}, Farm em Andamento!`);
+	}
+});
+client8.on('join', (channel, username, self) => {
+    if(self) {
+        client8.log.error(`Joined08 ${channel}`);
+    }
+});
 
 //cliente 9 Grv
 const client9 = new tmi.Client({
